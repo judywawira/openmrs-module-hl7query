@@ -101,19 +101,12 @@
 			<column name="uuid" value="AADDCCf4-18f6-184d-91f4-000c22c2DYUC"></column>
 			<column name="template">
 				<![CDATA[
-					<PID.5> 
-						for (patientname in patient.getNames()) { 
-			             	<XPN.1><FN.1>${patient.getFamilyName()}</FN.1></XPN.1>
-			         		<XPN.2>${patient.getGivenName()}</XPN.2>
-			         		<XPN.3>${patient.getMiddleName()}</XPN.3>
-			         	}	         			
-    				</PID.5>
-    				
+					 				
     				<PID.3> 
     				for (identifier in patient.getpatientIdentifier()){
-      <CX.1>patient.patientIdentifier.identifier</CX.1> <!-- displays the id number -->
-      <CX.5>patient.patientIdentifierType.name</CX.5> <!-- displays the name of the identifier type  -->
-  </PID.3>
+      				<CX.1>patient.patientIdentifier.identifier</CX.1> 
+      				<CX.5>patient.patientIdentifierType.name</CX.5> 
+  					</PID.3>
     				]]>
 			</column>
 		</insert>		
